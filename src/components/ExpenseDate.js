@@ -4,7 +4,7 @@ function ExpenseDate(props) {
       <div>{props.month}</div>
       <div>{props.year}</div>
       <div>{props.day}</div>
-    </div>
+    </div> //comment
   );
 }
 
