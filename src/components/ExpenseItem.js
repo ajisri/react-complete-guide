@@ -1,6 +1,8 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate.js";
-import Card from "./Card";
+import ExpenseTitle from "./ExpenseTitle.js";
+import ExpenseAmount from "./ExpenseAmount.js";
+import Card from "./Card.js";
 
 function ExpenseItem(props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
@@ -11,8 +13,8 @@ function ExpenseItem(props) {
     <Card className="expense-item">
       <ExpenseDate month={month} day={day} year={year}></ExpenseDate>
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
+        <ExpenseTitle title={props.title}></ExpenseTitle>
+        <ExpenseAmount amount={props.amount}></ExpenseAmount>
       </div>
     </Card>
   );
